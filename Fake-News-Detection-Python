@@ -1,0 +1,21 @@
+def detect_fake_news(news):
+    fake_keywords = [
+        "shocking", "miracle", "secret cure",
+        "fake", "unbelievable", "free money"
+    ]
+    news = news.lower()
+    for word in fake_keywords:
+        if word in news:
+            return "Possibly Fake News"
+    return "Needs Verification - Not Enough Evidence"
+print("=== Fake News Detection System ===")
+news = input("Enter a news headline: ")
+result = detect_fake_news(news)
+print("Result:", result)
+
+
+
+OUTPUT:
+=== Fake News Detection System ===
+Enter a news headline: Shocking secret cure discovered
+Result: Possibly Fake News
